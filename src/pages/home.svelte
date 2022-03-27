@@ -9,28 +9,16 @@
 
   <Toolbar bottom>
     <Link on:click={exit}><i class="f7-icons">xmark</i></Link>
-    <Link on:click={toggleMicrophone}><i class="f7-icons">{enabled ? 'mic' : 'mic_slash'}</i></Link>
   </Toolbar>
 </Page>
 <script>
-  import {f7, Page, NavLeft, Link, Toolbar, Block, Button} from 'framework7-svelte';
+  import {Page, Link, Toolbar, Block} from 'framework7-svelte';
   import GuitarTuner from 'guitar-tuner/src/GuitarTuner.svelte';
   import 'framework7-icons';
 
-  let enabled = false;
-
-  function toggleMicrophone() {
-    enabled = !enabled;
-  }
-
   function exit() {
-    if (navigator.app) {
-        navigator.app.exitApp();
-    } else if (navigator.device) {
-        navigator.device.exitApp();
-    } else {
-        window.close();
-    }
+    navigator.app.exitApp();
+    window.close();
   }
 
 </script>
