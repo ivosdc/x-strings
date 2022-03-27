@@ -1,0 +1,30 @@
+{
+  "cwd": "/mnt/c/Users/ibozi/repositories/x-strings",
+  "type": [
+    "pwa"
+  ],
+  "name": "X-Strings",
+  "framework": "svelte",
+  "template": "blank",
+  "bundler": "vite",
+  "cssPreProcessor": "less",
+  "theming": {
+    "customColor": true,
+    "color": "#1a1a1a",
+    "darkTheme": true,
+    "iconFonts": true,
+    "fillBars": true
+  },
+  "customBuild": true,
+  "customBuildConfig": {
+    "rtl": false,
+    "darkTheme": true,
+    "lightTheme": true,
+    "themes": [
+      "ios",
+      "md",
+      "aurora"
+    ],
+    "components": []
+  }
+}
