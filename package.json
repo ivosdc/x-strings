@@ -23,9 +23,11 @@
     "@capacitor/android": "^3.4.3",
     "@capacitor/core": "^3.4.3",
     "dom7": "^3.0.0",
+    "es6-promise-plugin": "^4.2.2",
     "framework7": "^6.3.16",
     "framework7-svelte": "^6.3.16",
     "material-icons": "^1.10.8",
+    "phonegap-plugin-media-stream": "^1.2.1",
     "skeleton-elements": "^3.5.0",
     "svelte": "^3.46.4",
     "swiper": "^6.8.4"

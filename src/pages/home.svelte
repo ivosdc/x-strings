@@ -1,7 +1,7 @@
 <Page name="home">
   <Block strong>
     <div class="xstrings-tuner">
-      <a href="https://gitarrenakkorde.org" target="_blank"><img src="assets/gitarrenakkorde.png" alt="gitarrenakkorde.org"></a>
+      <a href="https://gitarrenakkorde.org" target="_blank"><img src="static/gitarrenakkorde.png" alt="gitarrenakkorde.org"></a>
       <GuitarTuner></GuitarTuner>
       <a class="linkme" href="https://github.com/ivosdc/guitar-tuner" target="_blank">&lt;guitar-tuner/&gt;</a>
     </div>
