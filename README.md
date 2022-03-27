@@ -1,4 +1,7 @@
-# X-Strings
+# X-Strings Guitar Tuner
+Made with Svelte / Framework7 (Capacitor / Cordova)
+
+[Click here to download X-Strings Android-App!](https://ivosdc.github.io/x-strings/build/x-strings.apk)
 
 ## Capacitor
 ```
@@ -6,13 +9,33 @@ npm install @capacitor/core
 npm install @capacitor/cli --save-dev
 npx cap init
 npx cap add android
+npm install es6-promise-plugin
+npm install phonegap-plugin-media-stream
+npx cap update
 ```
+A Folder `android` was created.
 
-after building the add
+Building the app:
 ```
 npm run build
 npx cap sync
 ```
+
+## Inside Android Studio
+
+After the above steps, open the android folder as `new Project`.
+Click in the menu bar:
+```
+"Build" -> "Make Project"
+"Build" -> "Build Bundles(s) / APK(s)" -> "Build APK(s)"
+```
+
+After these steps, the apk will be created in the folder:
+```
+android/app/build/outputs/apk/debug/app-debug.apk
+```
+
+
 
 
 ## Framework7 CLI Options
