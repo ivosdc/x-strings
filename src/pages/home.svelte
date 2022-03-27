@@ -6,13 +6,9 @@
       <a class="linkme" href="https://github.com/ivosdc/guitar-tuner" target="_blank">&lt;guitar-tuner/&gt;</a>
     </div>
   </Block>
-
-  <Toolbar bottom>
-    <Link on:click={exit}><i class="f7-icons">xmark</i></Link>
-  </Toolbar>
 </Page>
 <script>
-  import {Page, Link, Toolbar, Block} from 'framework7-svelte';
+  import {Page, Block} from 'framework7-svelte';
   import GuitarTuner from 'guitar-tuner/src/GuitarTuner.svelte';
   import 'framework7-icons';
 

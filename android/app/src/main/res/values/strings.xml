@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">x-strings</string>
+    <string name="title_activity_main">x-strings</string>
+    <string name="package_name">one.ivolution.xstrings</string>
+    <string name="custom_url_scheme">one.ivolution.xstrings</string>
+</resources>
