@@ -3,27 +3,77 @@ Made with Svelte / Framework7 (Capacitor / Cordova)
 
 [Click here to download X-Strings Android-App!](https://ivosdc.github.io/x-strings/build/x-strings.apk)
 
-## Capacitor
+[You can try X-Strings here without installing.](https://ivosdc.github.io/guitar-tuner/dist "Guitar tuner Example")
+
+
+## HowTo: Create a Svelte-Android-App
+### Install framework7 cli
+```
+npm install -g framework7-cli
+```
+
+### Create Framework7-Svelte App:
+Assets can easily be added to your app later.
+```
+mkdir my-app
+cd my-app
+framework7 create --ui
+```
+
+This starts an app-create-wizzard on `http://localhost/3001`. Select the options:
+- capacitor
+- framework 7 with svelte
+and press the `create` button.
+
+
+### Capacitor
+Stay inside your app-folder and install Capacitor:
 ```
 npm install @capacitor/core
 npm install @capacitor/cli --save-dev
+```
+Initialize Capazitor and add android environment.
+```
 npx cap init
 npx cap add android
+```
+A Folder `android` was created.
+
+The Cordova-Browser needs plugins to act like a "normal" UI-Browser. We need phonegab to adapt `navigator.mediaDevices.getUserMedia` features.
+```
 npm install es6-promise-plugin
 npm install phonegap-plugin-media-stream
 npx cap update
 ```
-A Folder `android` was created.
 
-Building the app:
+### Svelte-Components
+Now we can implement Svelte-Things inide the `src` folder :) 
+
+Add needed assets with:
+```
+framework7 assets
+```
+or use the ui again.
+```
+framework7 assets --ui
+```
+The assets will be located in `assets-src` folder.
+
+
+When done, build the app and synchronize the build to the `android` folder.
 ```
 npm run build
 npx cap sync
 ```
+This was the `nodejs`-Part.
 
-## Inside Android Studio
+The `my-app.apk` file has to be created with e.g. Android Studio.
 
-After the above steps, open the android folder as `new Project`.
+### Android Studio
+Install android studio https://developer.android.com/studio/install
+
+
+Open the `android` folder as `new Project`.
 Click in the menu bar:
 ```
 "Build" -> "Make Project"
@@ -31,52 +81,10 @@ Click in the menu bar:
 ```
 
 After these steps, the apk will be created in the folder:
-```
-android/app/build/outputs/apk/debug/app-debug.apk
-```
+- `android/app/build/outputs/apk/debug/app-debug.apk` or
+- `android/app/build/intermediates/apk/debug/app-debug.apk`
 
-
-
-
-## Framework7 CLI Options
-
-Framework7 app created with following options:
-
-```
-{
-  "cwd": "/mnt/c/Users/ibozi/repositories/x-strings",
-  "type": [
-    "pwa"
-  ],
-  "name": "X-Strings",
-  "framework": "svelte",
-  "template": "blank",
-  "bundler": "vite",
-  "cssPreProcessor": "less",
-  "theming": {
-    "customColor": true,
-    "color": "#1a1a1a",
-    "darkTheme": true,
-    "iconFonts": true,
-    "fillBars": true
-  },
-  "customBuild": true,
-  "customBuildConfig": {
-    "rtl": false,
-    "darkTheme": true,
-    "lightTheme": true,
-    "themes": [
-      "ios",
-      "md",
-      "aurora"
-    ],
-    "components": []
-  }
-}
-```
-
-## Install Dependencies
-
+Have fun.
 First of all we need to install dependencies, run in terminal
 ```
 npm install
@@ -88,40 +96,4 @@ npm install
 * 🔧 `dev` - run development server
 * 🔧 `build` - build web app for production
 
-## Vite
-
-There is a [Vite](https://vitejs.dev) bundler setup. It compiles and bundles all "front-end" resources. You should work only with files located in `/src` folder. Vite config located in `vite.config.js`.
-
-## PWA
-
-This is a PWA. Don't forget to check what is inside of your `service-worker.js`. It is also recommended that you disable service worker (or enable "Update on reload") in browser dev tools during development.
-## Assets
-
-Assets (icons, splash screens) source images located in `assets-src` folder. To generate your own icons and splash screen images, you will need to replace all assets in this directory with your own images (pay attention to image size and format), and run the following command in the project directory:
-
-```
-framework7 assets
-```
-
-Or launch UI where you will be able to change icons and splash screens:
-
-```
-framework7 assets --ui
-```
-
-
-
-## Documentation & Resources
-
-* [Framework7 Core Documentation](https://framework7.io/docs/)
-
-
-* [Framework7 Svelte Documentation](https://framework7.io/svelte/)
-* [Framework7 Icons Reference](https://framework7.io/icons/)
-* [Community Forum](https://forum.framework7.io)
-
-## Support Framework7
-
-Love Framework7? Support project by donating or pledging on:
-- Patreon: https://patreon.com/framework7
-- OpenCollective: https://opencollective.com/framework7
+Assets (icons, splash screens) source images . To generate your own icons and splash screen images, you will need to replace all assets in this directory with your own images (pay attention to image size and format), and run the following command in the project directory:
