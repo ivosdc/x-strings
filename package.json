@@ -39,7 +39,7 @@
     "cpy-cli": "^4.1.0",
     "cross-env": "^7.0.3",
     "framework7-icons": "^5.0.5",
-    "guitar-tuner": "^0.0.3",
+    "guitar-tuner": "^0.0.4",
     "less": "^4.1.2",
     "postcss-preset-env": "^7.4.3",
     "vite": "^2.8.6",
