@@ -9,8 +9,6 @@
 <Page name="home">
     <Block strong>
         <div class="xstrings-block">
-            <a href="https://gitarrenakkorde.org" target="_blank"><img src="static/gitarrenakkorde.png"
-                                                                       alt="gitarrenakkorde.org"></a>
             <GuitarTuner/>
             <br />
             <div class="xstrings-chord">

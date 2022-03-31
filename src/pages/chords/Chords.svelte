@@ -78,11 +78,12 @@
         border: none;
         width: fit-content;
         align-items: center;
-        gap: 1rem;
+        gap: 0.5rem;
         margin-bottom: 1rem;
     }
 
     .chord {
+        width: 200px;
         display: flex;
         align-items: center;
     }
@@ -94,7 +95,7 @@
         width: fit-content;
         font-family: Verdana, Arial, Helvetica, sans-serif;
         font-weight: normal;
-        font-size: larger;
+        font-size: x-small;
         cursor: pointer;
         padding: 0.3rem 0.5rem;
     }
