@@ -116,8 +116,8 @@
         width: available;
         text-align: center;
         font-family: Verdana, Arial, Helvetica, sans-serif;
-        font-weight: lighter;
-        font-size: unset;
+        font-weight: normal;
+        font-size: small;
         cursor: pointer;
         padding: 0.2em 0.3rem;
     }
@@ -127,5 +127,6 @@
         color: #1A1A1A;
         background-color: #999;
     }
+
 
 </style>
