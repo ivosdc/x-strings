@@ -1,7 +1,7 @@
 <script>
     import {Page, Block, Toolbar, Link} from 'framework7-svelte';
     import GuitarTuner from 'guitar-tuner/src/GuitarTuner.svelte';
-    import Chords from './chords/Chords.svelte';
+    import GuitarChords from 'guitar-chords-viewer/src/GuitarChords.svelte';
     import 'framework7-icons';
 
     let mute = false;
@@ -19,14 +19,39 @@
     function pitchDown() {
         chamber_pitch--;
     }
+
+    function clearCanvas() {};
+    let canvas;
+
+    function drawCanvas(ctx, pitch, note, detune) {
+        ctx.fillStyle = "rgb(166, 166, 166)";
+        ctx.font = "12px Arial";
+        ctx.fillText(chamber_pitch + ' Hz', 3, 14);
+        ctx.fillText(pitch, 3, 26);
+        ctx.font = "28px Arial";
+        ctx.fillText(note, (width / 2) - 10, 30);
+        let color = Math.abs(detune) * 10 > 255 ? 255 : Math.abs(detune) * 10;
+        ctx.strokeStyle = "rgb(" + color + ", 0, 0)";
+        ctx.beginPath();
+        ctx.moveTo((width / 2), height - 5);
+        let scale = Math.abs(detune) > 5 ? 2 : 1;
+        ctx.lineTo((width / 2) + detune * scale, height - 5);
+        ctx.lineTo((width / 2) + detune * scale, height - 15);
+        ctx.lineTo((width / 2), height - 15);
+        ctx.lineTo((width / 2), height - 5);
+        ctx.stroke();
+        ctx.closePath();
+        ctx.fillStyle = "rgb(" + color + ", 0, 0)";
+        ctx.fill();
+    }
 </script>
 
 <Page name="home">
     <Block strong>
         <div class="xstrings-block">
-            <GuitarTuner {mute} {chamber_pitch}/>
+            <GuitarTuner {mute} {chamber_pitch} {drawCanvas}/>
             <br/>
-            <Chords/>
+            <GuitarChords/>
         </div>
     </Block>
     <Toolbar bottom>
