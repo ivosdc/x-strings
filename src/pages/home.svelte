@@ -20,9 +20,6 @@
         chamber_pitch--;
     }
 
-    function clearCanvas() {};
-    let canvas;
-
     function drawCanvas(ctx, pitch, note, detune) {
         ctx.fillStyle = "rgb(166, 166, 166)";
         ctx.font = "12px Arial";
@@ -47,6 +44,7 @@
 </script>
 
 <Page name="home">
+    <img src="static/web-icon.png" height="32" alt="x-strings logo"><span>X-strings</span>
     <Block strong>
         <div class="xstrings-block">
             <GuitarTuner {mute} {chamber_pitch} {drawCanvas}/>
@@ -65,9 +63,6 @@
 </Page>
 
 <style>
-    .xstrings-chord {
-    }
-
     .xstrings-block {
         background-color: #1A1A1A;
         width: 100%;
