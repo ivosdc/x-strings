@@ -44,14 +44,15 @@
 </script>
 
 <Page name="home">
-    <Block strong style="height:available;">
+    <Block strong>
         <div class="xstrings-block">
             <div>
                 <img src="static/x-strings-guitar.png" height="50" alt="X-Strings">
                 <img src="static/x-strings-font.png" height="50" alt="X-Strings">
             </div>
+            <p class="text">Guitar-Tuner</p>
             <GuitarTuner {mute} {chamber_pitch} {drawCanvas}/>
-            <p class="text">Guitar tuner and chord overview.</p>
+            <p class="text">Chord-Overview</p>
             <GuitarChords/>
         </div>
     </Block>
