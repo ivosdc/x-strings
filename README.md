@@ -19,4 +19,4 @@ Bookmark [http://x-strings.ivolution.one](http://x-strings.ivolution.one) to che
 ## Technical doc.
 Made with Svelte / Framework7 (Capacitor / Cordova)
 
-[HowTo make a Svelte-Android-App](./HowToSvelteAndroidApp.md "HowTo make a Svelte-Android-App")
+[HowTo make a Svelte-Android-App](./HowToSvelteAndroidApp "HowTo make a Svelte-Android-App")
