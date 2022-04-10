@@ -44,19 +44,7 @@
 </script>
 
 <Page name="home">
-    <Block strong>
-        <div class="xstrings-block">
-            <div>
-                <img src="static/x-strings-guitar.png" height="50" alt="X-Strings">
-                <img src="static/x-strings-font.png" height="50" alt="X-Strings">
-            </div>
-            <p class="text">Guitar-Tuner</p>
-            <GuitarTuner {mute} {chamber_pitch} {drawCanvas}/>
-            <p class="text">Chord-Overview</p>
-            <GuitarChords/>
-        </div>
-    </Block>
-    <Toolbar bottom>
+    <Toolbar top>
         <Link>
             <Link on:click={pitchDown}><i class="f7-icons">arrowtriangle_down</i></Link>
             {chamber_pitch} Hz
@@ -64,6 +52,18 @@
         </Link>
         <Link on:click={toggleMicrophone}><i class="f7-icons">{mute ? 'mic_slash' : 'mic'}</i></Link>
     </Toolbar>
+    <Block strong>
+        <div class="xstrings-block">
+            <div>
+                <img src="static/x-strings-guitar.png" height="50" alt="X-Strings">
+                <img src="static/x-strings-font.png" height="50" alt="X-Strings">
+            </div>
+            <p class="text">Guitar-Tuner and Chord-Overview</p>
+            <GuitarTuner {mute} {chamber_pitch} {drawCanvas}/>
+            <br />
+            <GuitarChords/>
+        </div>
+    </Block>
 </Page>
 
 <style>
