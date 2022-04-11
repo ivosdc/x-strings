@@ -1,5 +1,5 @@
 <script>
-    import {Page, Block, Toolbar, Link} from 'framework7-svelte';
+    import {Panel, Page, Block, Toolbar, Link, Navbar, Button} from 'framework7-svelte';
     import GuitarTuner from 'guitar-tuner/src/GuitarTuner.svelte';
     import GuitarChords from 'guitar-chords-viewer/src/GuitarChords.svelte';
     import 'framework7-icons';
@@ -41,10 +41,12 @@
         ctx.fillStyle = "rgb(" + color + ", 0, 0)";
         ctx.fill();
     }
+
 </script>
 
-<Page name="home">
+<Page home>
     <Toolbar top>
+        <Button panelOpen="#panel-nested"><i class="f7-icons">info_circle</i></Button>
         <Link>
             <Link on:click={pitchDown}><i class="f7-icons">arrowtriangle_down</i></Link>
             {chamber_pitch} Hz
@@ -52,21 +54,49 @@
         </Link>
         <Link on:click={toggleMicrophone}><i class="f7-icons">{mute ? 'mic_slash' : 'mic'}</i></Link>
     </Toolbar>
-    <Block strong>
-        <div class="xstrings-block">
-            <div>
-                <img src="static/x-strings-guitar.png" height="50" alt="X-Strings">
-                <img src="static/x-strings-font.png" height="50" alt="X-Strings">
+    <div class="xstrings-block">
+        <div class="tuner-logo">
+            <div class="guitar-logo">
+                <img src="static/x-strings-guitar.png" width="50" alt="X-Strings">
             </div>
-            <p class="text">Guitar-Tuner and Chord-Overview</p>
-            <GuitarTuner {mute} {chamber_pitch} {drawCanvas}/>
-            <br />
-            <GuitarChords/>
+            <div class="guitar-tuner">
+                <GuitarTuner {mute} {chamber_pitch} {drawCanvas}/>
+            </div>
+            <div class="xstrings-logo">
+                <img src="static/x-strings-font.png" width="100" alt="X-Strings">
+            </div>
         </div>
-    </Block>
+        <p class="text">Guitar-Tuner and Chord-Overview</p>
+        <GuitarChords/>
+    </div>
 </Page>
 
 <style>
+
+    .text {
+        font-size: smaller;
+        color: #A1A1A1
+    }
+
+    .guitar-logo {
+        width: 110px;
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: 0.5em;
+    }
+
+    .xstrings-logo {
+        width: 110px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .tuner-logo {
+        display: flex;
+        padding-top: 0.5em;
+        align-items: center;
+    }
+
     .xstrings-block {
         background-color: #1A1A1A;
         width: 100%;
