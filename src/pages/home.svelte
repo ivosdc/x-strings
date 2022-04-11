@@ -63,7 +63,6 @@
                 <GuitarTuner {mute} {chamber_pitch} {drawCanvas}/>
             </div>
             <div class="xstrings-logo">
-                <img src="static/x-strings-font.png" width="100" alt="X-Strings">
             </div>
         </div>
         <p class="text">Guitar-Tuner and Chord-Overview</p>
