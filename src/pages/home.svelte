@@ -1,100 +1,26 @@
 <script>
-    import {Panel, Page, Block, Toolbar, Link, Navbar, Button} from 'framework7-svelte';
-    import GuitarTuner from 'guitar-tuner/src/GuitarTuner.svelte';
+    import {
+        Page,
+        Toolbar,
+        Button,
+        BlockTitle
+    } from 'framework7-svelte';
     import GuitarChords from 'guitar-chords-viewer/src/GuitarChords.svelte';
     import 'framework7-icons';
 
-    let mute = false;
-
-    function toggleMicrophone() {
-        mute = !mute;
-    }
-
-    let chamber_pitch = 440;
-
-    function pitchUp() {
-        chamber_pitch++;
-    }
-
-    function pitchDown() {
-        chamber_pitch--;
-    }
-
-    function drawCanvas(ctx, pitch, note, detune) {
-        ctx.fillStyle = "rgb(166, 166, 166)";
-        ctx.font = "12px Arial";
-        ctx.fillText(chamber_pitch + ' Hz', 3, 14);
-        ctx.fillText(pitch, 3, 26);
-        ctx.font = "28px Arial";
-        ctx.fillText(note, (width / 2) - 10, 30);
-        let color = Math.abs(detune) * 10 > 255 ? 255 : Math.abs(detune) * 10;
-        ctx.strokeStyle = "rgb(" + color + ", 0, 0)";
-        ctx.beginPath();
-        ctx.moveTo((width / 2), height - 5);
-        let scale = Math.abs(detune) > 5 ? 2 : 1;
-        ctx.lineTo((width / 2) + detune * scale, height - 5);
-        ctx.lineTo((width / 2) + detune * scale, height - 15);
-        ctx.lineTo((width / 2), height - 15);
-        ctx.lineTo((width / 2), height - 5);
-        ctx.stroke();
-        ctx.closePath();
-        ctx.fillStyle = "rgb(" + color + ", 0, 0)";
-        ctx.fill();
-    }
-
 </script>
 
-<Page home>
+<Page name="home">
+    <BlockTitle><img src="static/x-strings-font.png" height="50" alt="X-Strings">Guitar Chords</BlockTitle>
     <Toolbar top>
-        <Button panelOpen="#panel-nested"><i class="f7-icons">info_circle</i></Button>
-        <Link>
-            <Link on:click={pitchDown}><i class="f7-icons">arrowtriangle_down</i></Link>
-            {chamber_pitch} Hz
-            <Link on:click={pitchUp}><i class="f7-icons">arrowtriangle_up</i></Link>
-        </Link>
-        <Link on:click={toggleMicrophone}><i class="f7-icons">{mute ? 'mic_slash' : 'mic'}</i></Link>
+        <Button panelOpen="left"><img src="static/x-strings-guitar.png" height="30" alt="about"></Button>
     </Toolbar>
     <div class="xstrings-block">
-        <div class="tuner-logo">
-            <div class="guitar-logo">
-                <img src="static/x-strings-guitar.png" width="50" alt="X-Strings">
-            </div>
-            <div class="guitar-tuner">
-                <GuitarTuner {mute} {chamber_pitch} {drawCanvas}/>
-            </div>
-            <div class="xstrings-logo">
-            </div>
-        </div>
-        <p class="text">Guitar-Tuner and Chord-Overview</p>
         <GuitarChords/>
     </div>
 </Page>
 
 <style>
-
-    .text {
-        font-size: smaller;
-        color: #A1A1A1
-    }
-
-    .guitar-logo {
-        width: 110px;
-        display: flex;
-        flex-direction: row-reverse;
-        padding-right: 0.5em;
-    }
-
-    .xstrings-logo {
-        width: 110px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .tuner-logo {
-        display: flex;
-        padding-top: 0.5em;
-        align-items: center;
-    }
 
     .xstrings-block {
         background-color: #1A1A1A;
