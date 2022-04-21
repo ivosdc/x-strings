@@ -1,6 +1,5 @@
 # X-Strings Guitar-Tool
 X-strings is a collection of useful guitar-webcomponents bunched to an Android-App.
-Bookmark [http://x-strings.ivolution.one](http://x-strings.ivolution.one) to check for new versions.
 
 ![X-Strings Guitar-Tool](public/icons/128x128.png)
 

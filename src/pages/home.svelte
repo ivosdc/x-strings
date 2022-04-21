@@ -3,7 +3,7 @@
         Page,
         Toolbar,
         Button,
-        BlockTitle
+        BlockTitle, Block
     } from 'framework7-svelte';
     import GuitarChords from 'guitar-chords-viewer/src/GuitarChords.svelte';
     import 'framework7-icons';
@@ -11,24 +11,17 @@
 </script>
 
 <Page name="home">
-    <BlockTitle><img src="static/x-strings-font.png" height="50" alt="X-Strings">Guitar Chords</BlockTitle>
-    <Toolbar top>
-        <Button panelOpen="left"><img src="static/x-strings-guitar.png" height="30" alt="about"></Button>
-    </Toolbar>
-    <div class="xstrings-block">
-        <GuitarChords/>
-    </div>
+    <BlockTitle>Guitar Chords & Tuner</BlockTitle>
+    <Block>
+        <img src="static/x-strings-guitar.png" height="50" alt="about">
+        <img src="static/x-strings-font.png" height="50" alt="about">
+        <p>This software comes without warranty. Any usage is at your own risk.</p>
+        <p>This software does not collect any data and has no connection to third party applications or companies.</p>
+        <p>The usage of the audio-device in special the microphone is for pitch detection only to identify the tone
+            of your guitar.</p>
+        Copyright 2022, Ivo Bozic, ivolutione@gmail.com
+    </Block>
 </Page>
 
 <style>
-
-    .xstrings-block {
-        background-color: #1A1A1A;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
 </style>

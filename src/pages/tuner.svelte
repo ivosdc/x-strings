@@ -41,12 +41,18 @@
     ctx.fill();
   }
 
+  let min_signal = 0.01;
+  let threshold = 0.00625;
+  function setMinSignal() {
+  }
+  function setThreshold() {
+  }
+
 </script>
 
 <Page name="tuner">
-  <BlockTitle><img src="static/x-strings-font.png" height="50" alt="X-Strings">Guitar Tuner</BlockTitle>
+  <BlockTitle>Guitar Tuner</BlockTitle>
   <Toolbar top>
-    <Link panelOpen="left"><img src="static/x-strings-guitar.png" height="30" alt="about"></Link>
     <Link>
       <Link on:click={pitchDown}><i class="f7-icons">arrowtriangle_down</i></Link>
       {chamber_pitch} Hz
@@ -59,11 +65,13 @@
       <div class="guitar-logo">
       </div>
       <div class="guitar-tuner">
-        <GuitarTuner {mute} {chamber_pitch} {drawCanvas}/>
+        <GuitarTuner {mute} {chamber_pitch} {threshold} {min_signal} {drawCanvas}/>
       </div>
       <div class="xstrings-logo">
       </div>
     </div>
+    <p id="min-signal" class="min-signal">Min.Signal:<input bind:value={min_signal} type="range" min="0.001" max="0.1" step="0.001" class="slider" id="min-signal-slider"><span id="min-signal-value">{min_signal}</span></p>
+    <p id="threshold" class="threshold">Threshold:<input bind:value={threshold} type="range" min="0.00005" max="0.025" step="0.00005" class="slider" id="threshold-slider"><span id="threshold-value">{threshold}</span></p>
   </div>
 
 
