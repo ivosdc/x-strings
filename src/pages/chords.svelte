@@ -11,7 +11,7 @@
 </script>
 
 <Page name="home">
-    <BlockTitle>Guitar Chords</BlockTitle>
+    <BlockTitle>Guitar chords overview</BlockTitle>
     <Toolbar top>
     </Toolbar>
     <div class="xstrings-block">

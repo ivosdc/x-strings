@@ -3,8 +3,6 @@
 copy-apk.sh,9\4\949798ccb02a8a8d67f7b79fd848a05647fcd760
 H
 HowToSvelteAndroidApp.md,2\a\2a3cb6c8031e7e9703a8021d5753ecd1b52d24ee
-=
-src/js/app.js,d\f\dfa7e20d89fdea717938db2bf088fdea8c2f0616
 >
 src/index.html,5\c\5c975582791da6f060261188096d6aad85db6e09
 G
@@ -13,5 +11,3 @@ K
 src/js/framework7-custom.js,6\c\6c146cdfa1d57b03ebb7073b9c248860d90f790e
 @
 src/css/app.less,8\9\896f2e51955d1bf932c4592d1d3990f583b8c83a
-@
-src/js/routes.js,1\2\12f9a0691aa6e9bb9703b19e9bcd22394b3009b7

@@ -5,13 +5,15 @@
         <!-- Tabbar for switching views-tabs -->
         <Toolbar tabbar labels bottom>
             <Link tabLink="#view-home" text="X-Strings"><img src="static/x-strings-guitar.png" height="30" alt="x-strings"></Link>
-            <Link tabLink="#view-chords" text="Chords"><i class="f7-icons">music_note_list</i></Link>
             <Link tabLink="#view-tuner" text="Tuner"><i class="f7-icons">gauge</i></Link>
+            <Link tabLink="#view-metronom" text="Metronom"><i class="f7-icons">metronome</i></Link>
+            <Link tabLink="#view-chords" text="Chords"><i class="f7-icons">music_note_list</i></Link>
         </Toolbar>
         <!-- Your main view/tab, should have "view-main" class. It also has "tabActive" prop -->
-        <View id="view-home" main tab tabActive url="/"/>
         <View id="view-tuner" name="tuner" tab url="/tuner/"/>
         <View id="view-chords" name="chords" tab url="/chords/"/>
+        <View id="view-metronom" name="metronom" tab url="/metronom/"/>
+        <View id="view-home" name="home" main tabActive tab url="/"/>
     </Views>
 
 </App>

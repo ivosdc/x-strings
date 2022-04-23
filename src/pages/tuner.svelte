@@ -1,5 +1,5 @@
 <script>
-  import {Page, BlockTitle, Toolbar, Button, Link} from 'framework7-svelte';
+  import {Page, BlockTitle, Toolbar, Link} from 'framework7-svelte';
   import GuitarTuner from 'guitar-tuner/src/GuitarTuner.svelte';
   import 'framework7-icons';
 
@@ -43,11 +43,6 @@
 
   let min_signal = 0.01;
   let threshold = 0.00625;
-  function setMinSignal() {
-  }
-  function setThreshold() {
-  }
-
 </script>
 
 <Page name="tuner">
@@ -70,14 +65,17 @@
       <div class="xstrings-logo">
       </div>
     </div>
-    <p id="min-signal" class="min-signal">Min.Signal:<input bind:value={min_signal} type="range" min="0.001" max="0.1" step="0.001" class="slider" id="min-signal-slider"><span id="min-signal-value">{min_signal}</span></p>
-    <p id="threshold" class="threshold">Threshold:<input bind:value={threshold} type="range" min="0.00005" max="0.025" step="0.00005" class="slider" id="threshold-slider"><span id="threshold-value">{threshold}</span></p>
+    <br/>
+    <p class="min-signal">Microphone settings:</p>
+    <p class="slider">Sensitivity <input bind:value={min_signal} type="range" min="0.001" max="0.1" step="0.001" class="slider" id="min-signal-slider"> {min_signal}</p>
+    <p class="slider">Noise filter <input bind:value={threshold} type="range" min="0.00005" max="0.025" step="0.00005" class="slider" id="threshold-slider"> {threshold}</p>
   </div>
-
-
 </Page>
 
 <style>
+  .slider {
+    margin-top: 0;
+  }
 
   .guitar-logo {
     width: 110px;
