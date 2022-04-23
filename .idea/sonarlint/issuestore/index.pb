@@ -11,3 +11,19 @@ K
 src/js/framework7-custom.js,6\c\6c146cdfa1d57b03ebb7073b9c248860d90f790e
 @
 src/css/app.less,8\9\896f2e51955d1bf932c4592d1d3990f583b8c83a
+7
+LICENSE,0\3\0398ccd0f49298b10a3d76a47800d2ebecd49859
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+J
+datenschutzerklaerung.html,4\4\44f3b7ea5880e12753ae3818495cda3fa4c3e296
+=
+src/js/app.js,d\f\dfa7e20d89fdea717938db2bf088fdea8c2f0616
+@
+src/js/routes.js,1\2\12f9a0691aa6e9bb9703b19e9bcd22394b3009b7
+I
+src/components/app.svelte,7\6\764596729652145c31fd9a604ea4fc54821dda42
+G
+src/pages/chords.svelte,5\8\5848704f92c45aae89b59fe059718b94e8a4e2d1
+E
+src/pages/home.svelte,0\1\017e9a24cd29b0f192bd7fd875f84af0b2374e0f

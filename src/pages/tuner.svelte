@@ -1,6 +1,7 @@
 <script>
   import {Page, BlockTitle, Toolbar, Link} from 'framework7-svelte';
   import GuitarTuner from 'guitar-tuner/src/GuitarTuner.svelte';
+  import GuitarTuning from 'guitar-tuning/src/GuitarTuning.svelte';
   import 'framework7-icons';
 
   let mute = false;
@@ -69,6 +70,7 @@
     <p class="min-signal">Microphone settings:</p>
     <p class="slider">Sensitivity <input bind:value={min_signal} type="range" min="0.001" max="0.1" step="0.001" class="slider" id="min-signal-slider"> {min_signal}</p>
     <p class="slider">Noise filter <input bind:value={threshold} type="range" min="0.00005" max="0.025" step="0.00005" class="slider" id="threshold-slider"> {threshold}</p>
+    <GuitarTuning chamber_tone={chamber_pitch} />
   </div>
 </Page>
 
