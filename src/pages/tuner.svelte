@@ -59,12 +59,12 @@
 <Page name="tuner">
     <BlockTitle>Guitar Tuner</BlockTitle>
     <Toolbar top>
-        <Link on:click={toggleMicrophone}><i class="f7-icons">{mute ? 'mic_slash' : 'mic'}</i></Link>
         <Link>
             <Link on:click={pitchDown}><i class="f7-icons">arrowtriangle_down</i></Link>
             {chamber_pitch} Hz
             <Link on:click={pitchUp}><i class="f7-icons">arrowtriangle_up</i></Link>
         </Link>
+        <Link on:click={toggleMicrophone}><i class="f7-icons">{mute ? 'mic_slash' : 'mic'}</i></Link>
     </Toolbar>
     <div class="xstrings-block">
         <div class="tuner-logo">
