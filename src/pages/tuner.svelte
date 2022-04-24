@@ -54,30 +54,17 @@
         tuning = tuning;
     }
 
-    function setNote(event, index) {
-        console.log(event.target.value);
-        let note = getNote(index);
-        let octave = tuning[index].slice(-1);
-        console.log(note + octave)
-        tuning[index] = note + octave;
-        tuning = tuning;
-    }
-
-    function getNote(index) {
-        return NOTES_SHARP[tuning_edit[index]]
-    }
-
 </script>
 
 <Page name="tuner">
     <BlockTitle>Guitar Tuner</BlockTitle>
     <Toolbar top>
+        <Link on:click={toggleMicrophone}><i class="f7-icons">{mute ? 'mic_slash' : 'mic'}</i></Link>
         <Link>
             <Link on:click={pitchDown}><i class="f7-icons">arrowtriangle_down</i></Link>
             {chamber_pitch} Hz
             <Link on:click={pitchUp}><i class="f7-icons">arrowtriangle_up</i></Link>
         </Link>
-        <Link on:click={toggleMicrophone}><i class="f7-icons">{mute ? 'mic_slash' : 'mic'}</i></Link>
     </Toolbar>
     <div class="xstrings-block">
         <div class="tuner-logo">

@@ -23,8 +23,6 @@ J
 src/js/routes.js,1\2\12f9a0691aa6e9bb9703b19e9bcd22394b3009b7
 I
 src/components/app.svelte,7\6\764596729652145c31fd9a604ea4fc54821dda42
-G
-src/pages/chords.svelte,5\8\5848704f92c45aae89b59fe059718b94e8a4e2d1
 E
 src/pages/home.svelte,0\1\017e9a24cd29b0f192bd7fd875f84af0b2374e0f
 H
