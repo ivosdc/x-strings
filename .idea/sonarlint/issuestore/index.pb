@@ -27,3 +27,5 @@ G
 src/pages/chords.svelte,5\8\5848704f92c45aae89b59fe059718b94e8a4e2d1
 E
 src/pages/home.svelte,0\1\017e9a24cd29b0f192bd7fd875f84af0b2374e0f
+H
+src/pages/IconService.js,7\3\736e3d317900a1cf76b4ea2ec569ed66ed60ba62
